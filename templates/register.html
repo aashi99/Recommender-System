@@ -1,0 +1,22 @@
+
+<html>
+<head>
+<title>Sign up</title>
+</head>
+<body>
+<form action="{{url_for('register')}}" method="post">
+    <!-- <p>Email: <input type="email" name="email"></p> -->
+    <div class ="msg">{{msg3}}</div>
+    <p>Name: <input type="text" name="name" ></p>
+    <p>UserId:<input type="text" name="userid"required></p>
+    <P>Password: <input type="password" name="password" id="password" required></p>
+    <!-- <p>Confirm Password: <input type="password" name="cpassword" id="cpassword"></p> -->
+
+  <!-- <!  <p>Last Name: <input type="text" name="lastName"></p> -->
+
+    <p><input type="submit" value="Register"></p>
+
+    <a href="{{url_for('login')}}">Login here</a>
+</form>
+</body>
+</html>

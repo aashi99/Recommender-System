@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+<!-- <a href="/rate_movies">{{msg}}</a> -->
+  <form action="{{url_for('rate_movies')}}" method="POST">
+<ul>
+    {%for movie in list%}
+       <li>{{movie}}
+        <select name="movies">
+        <option value=0>Not Watched</option>
+        <option value=0.5>0.5</option>
+        <option value=1>1</option>
+        <option value=1.5>1.5</option>
+        <option value=2>2</option>
+        <option value=2.5>2.5</option>
+        <option value=3>3</option>
+        <option value=3.5>3.5</option>
+        <option value=4>4</option>
+        <option value=4.5>4.5</option>
+        <option value=5>5</option>
+        </select>&nbsp;</li>
+</form>
+    {%endfor%}
+    <input type="submit" value="Submit">
+</ul>
+{{confirm}}
+<a href="/recommend">Get Recommendations</a>
+
+  </body>
+</html>
